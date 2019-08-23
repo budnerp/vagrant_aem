@@ -30,7 +30,7 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     ```
 2. Clone repository, pull sub-modules and start provisioning
     ```
-    git clone https://github.com/budnerp/vagrant_ansible.git
+    git clone https://github.com/budnerp/vagrant_aem.git
     git submodule init
     git submodule update
     vagrant up
@@ -81,6 +81,9 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     Author: http://192.168.33.12:4502/
     
     Credentials admin:admin
+
+## Links
+Set up a Local AEM Development Environment https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
