@@ -34,11 +34,12 @@ Vagrant.configure("2") do |config|
         machine.vm.hostname = "aem"
         machine.vm.network "private_network", ip: "192.168.33.12"
         machine.vm.network "forwarded_port", guest: 4502, host: 4502
+        machine.vm.network "forwarded_port", guest: 4503, host: 4503
         machine.vm.provider "virtualbox" do |vb|
             vb.name = "vagrant_ansible_aem"
             vb.gui = false
-            vb.memory = "1536"
-            vb.cpus = 1
+            vb.memory = "4096"
+            vb.cpus = 2
         end
         machine.vm.provision :ansible_local do |ansible|
             ansible.verbose = "vvv"
