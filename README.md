@@ -49,6 +49,38 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
+7. AEM manual, raw installation guide
+
+    Upload `AEM_6.5_Quickstart.jar` and `license.properties` into `/home/vagrant/`
+    ```
+    cd /home/vagrant/ 
+    sudo mkdir /opt/aem
+    sudo mkdir /opt/aem/author
+    sudo mkdir /opt/aem/publish
+    sudo cp AEM_6.5_Quickstart.jar /opt/aem/author/aem-author-p4502.jar
+    sudo cp AEM_6.5_Quickstart.jar /opt/aem/publish/aem-publish-p4503.jar
+    sudo cp license.properties /opt/aem/author/
+    sudo cp license.properties /opt/aem/publish/
+    cd /opt/aem
+    sudo chown -R vagrant:vagrant .
+    sudo chmod -R 0777 .
+    ls -la
+    cd author
+    java -jar aem-author-p4502.jar -unpack
+    cd ../publish
+    java -jar aem-publish-p4503.jar -unpack
+    cd /
+    /opt/aem/authtor/bin/start
+    /opt/aem/publish/bin/start
+    ```
+    
+    wait and check in browser
+     
+    Publish: http://192.168.33.12:4503/
+    
+    Author: http://192.168.33.12:4502/
+    
+    Credentials admin:admin
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
