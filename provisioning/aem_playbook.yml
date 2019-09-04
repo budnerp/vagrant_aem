@@ -12,3 +12,4 @@
     - ansible_role_apache2
     - ansible_role_selinux
     - ansible_role_java8
+    - ansible_role_aem
