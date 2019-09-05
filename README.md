@@ -70,8 +70,8 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     cd ../publish
     java -jar aem-publish-p4503.jar -unpack
     cd /
-    /opt/aem/authtor/bin/start
-    /opt/aem/publish/bin/start
+    /opt/aem/author/crx-quickstart/bin/start
+    /opt/aem/publish/crx-quickstart/bin/start
     ```
     
     wait and check in browser
