@@ -84,6 +84,7 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
 
 ## Links
 Set up a Local AEM Development Environment https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html
+https://github.com/adobe/aem-cif-project-archetype
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
