@@ -6,10 +6,10 @@
   become_user: root
 
   roles:
-#    - ansible_role_extra_repositories # Enable EPEL and Remi's repositories
-#    - ansible_role_common
-#    - ansible_role_git
-#    - ansible_role_apache2
-#    - ansible_role_selinux
-#    - ansible_role_java8
+    - ansible_role_extra_repositories # Enable EPEL and Remi's repositories
+    - ansible_role_common
+    - ansible_role_git
+    - ansible_role_apache2
+    - ansible_role_selinux
+    - ansible_role_java8
     - ansible_role_aem
