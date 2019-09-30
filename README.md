@@ -44,12 +44,21 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     ```
     vagrant ssh aem
     ```
-6. Setup GIT config (if ansible_role_git is a part of playbook)
+6. (Optional) Setup GIT config (if ansible_role_git is a part of playbook)
     ```
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
-7. AEM starts as an service with machine boot
+7. To start AEM author instance execute:
+    ```
+    sudo /opt/aem/author/crx-quickstart/bin/start
+    ```
+    To start AEM publish instance:
+    ```
+    sudo /opt/aem/publish/crx-quickstart/bin/start
+    ```
+
+
 ## AEM manual, raw installation guide
 Upload `AEM_6.5_Quickstart.jar` and `license.properties` into `/home/vagrant/`
 ```
