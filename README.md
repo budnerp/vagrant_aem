@@ -1,4 +1,4 @@
-# vagrant_aem
+# Vagrant and Ansible for Adobe Experience Manager
 VirtualBox based VM integrated with Vagrant and Ansible for AEM development
 
 ## What's inside?
@@ -33,23 +33,23 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     git clone https://github.com/budnerp/vagrant_aem.git
     git submodule init
     git submodule update
-    vagrant up
     ```
-3. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
+3. Replace `provisioning/roles/ansible_role_aem/templates/aem/replace-this-with-AEM_6.5_Quickstart.jar.txt` file with valid `AEM_6.5_Quickstart.jar` file.
+4. Replace `provisioning/roles/ansible_role_aem/templates/aem/replace-this-with-license.properties-file.txt` file with valid `license.properties` file.
+5. Set a domain in your hosts file (add a line in C:\Windows\System32\drivers\etc\hosts). Refer to Vagrantfile's web.vm.hostname configuration. Example:
     ```
     192.168.33.12 aem.local
     ```
-4. Coffee sip :)
-5. SSH into the instance. Execute:
+6. SSH into the instance. Execute:
     ```
     vagrant ssh aem
     ```
-6. (Optional) Setup GIT config (if ansible_role_git is a part of playbook)
+7. (Optional) Setup GIT config (if ansible_role_git is a part of playbook)
     ```
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
-7. To start AEM author instance execute:
+8. To start AEM author instance execute:
     ```
     sudo /opt/aem/author/crx-quickstart/bin/start
     ```
@@ -57,7 +57,7 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     ```
     sudo /opt/aem/publish/crx-quickstart/bin/start
     ```
-
+9. Wait until services are up (this might take a while).
 
 ## AEM manual, raw installation guide
 Upload `AEM_6.5_Quickstart.jar` and `license.properties` into `/home/vagrant/`
