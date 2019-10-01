@@ -8,7 +8,7 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     - Ansible (local) 2.x installed 
     - Machine "aem":
         - private_network, ip: 192.168.33.12
-        - 1 CPU, 1536MB of memory
+        - 2 CPU, 4096MB of memory
         - SSH on port 22
 - Epel and Remi's RPM repositories
 - Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`
