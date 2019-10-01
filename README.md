@@ -14,6 +14,10 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
 - Common tools: `htop`, `vim`, `nano`, `mc`, `lsof`, `wget`, `zip`, `unzip`
 - GIT 2.9
 - SELinux disabled
+- AEM:
+    - Frontend: http://192.168.33.12:4503/
+    - Backend: http://192.168.33.12:4502/ (default admin user: admin, password: admin)
+    - Sample data
 
 ## Prerequisities
 - Git
@@ -42,7 +46,7 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     ```
 6. SSH into the instance. Execute:
     ```
-    vagrant ssh aem
+    vagrant ssh
     ```
 7. (Optional) Setup GIT config (if ansible_role_git is a part of playbook)
     ```
@@ -58,38 +62,8 @@ VirtualBox based VM integrated with Vagrant and Ansible for AEM development
     sudo /opt/aem/publish/crx-quickstart/bin/start
     ```
 9. Wait until services are up (this might take a while).
-
-## AEM manual, raw installation guide
-Upload `AEM_6.5_Quickstart.jar` and `license.properties` into `/home/vagrant/`
-```
-cd /home/vagrant/ 
-sudo mkdir /opt/aem
-sudo mkdir /opt/aem/author
-sudo mkdir /opt/aem/publish
-sudo cp AEM_6.5_Quickstart.jar /opt/aem/author/aem-author-p4502.jar
-sudo cp AEM_6.5_Quickstart.jar /opt/aem/publish/aem-publish-p4503.jar
-sudo cp license.properties /opt/aem/author/
-sudo cp license.properties /opt/aem/publish/
-cd /opt/aem
-sudo chown -R vagrant:vagrant .
-sudo chmod -R 0777 .
-ls -la
-cd author
-java -jar aem-author-p4502.jar -unpack
-cd ../publish
-java -jar aem-publish-p4503.jar -unpack
-cd /
-/opt/aem/author/crx-quickstart/bin/start
-/opt/aem/publish/crx-quickstart/bin/start
-```
-
-wait and check in browser
- 
-Publish: http://192.168.33.12:4503/
-
-Author: http://192.168.33.12:4502/
-
-Credentials admin:admin
+10. Validate author instance at http://192.168.33.12:4502/ (credentials admin:admin)
+11. Validate author instance at http://192.168.33.12:4503/
 
 ## Links
 Set up a Local AEM Development Environment https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html
